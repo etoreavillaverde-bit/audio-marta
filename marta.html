@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JARVIS - Protocolo de Tejidos Humanos</title>
+    <title>JARVIS - Protocolo Autónomo</title>
     <style>
         /* Diseño de Interfaz Futurista de J.A.R.V.I.S. */
         body {
@@ -86,20 +86,25 @@
 <body>
 
     <div class="interface-container">
-        <!-- Núcleo de Energía Giratorio -->
         <div class="system-core"></div>
         <h1>J.A.R.V.I.S.</h1>
-        <div class="status">Base de Datos: Tejidos del Cuerpo Humano</div>
+        <div class="status">Carga Local de Datos Completada</div>
 
         <div class="audio-card">
-            <div class="audio-title">REPRODUCIENDO: Informe de Tejidos Organismo</div>
-            <!-- Tu enlace directo de Catbox -->
-            <audio controls preload="auto">
-                <source src="https://catbox.moe" type="audio/mpeg">
-                Tu navegador no soporta el reproductor de audio.
-            </audio>
+            <div class="audio-title">REPRODUCIENDO: Base de Datos Interna</div>
+            <!-- El reproductor está preparado para recibir el audio directo del script -->
+            <audio id="jarvisPlayer" controls></audio>
         </div>
     </div>
+
+    <script>
+        // Este script inyecta de forma autónoma el archivo local "audio.mp3" dentro del reproductor
+        window.addEventListener('DOMContentLoaded', () => {
+            const player = document.getElementById('jarvisPlayer');
+            player.src = 'audio.mp3';
+            player.load();
+        });
+    </script>
 
 </body>
 </html>
